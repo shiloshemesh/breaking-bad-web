@@ -36,6 +36,8 @@ namespace breaking_bad_web
                 errorMessage.Text = "almost nothing is filled";
             else if (num < 2 && num > 0)
                 errorMessage.Text = $"you need to fill {num} more";
+
+
         }
     }
 }
