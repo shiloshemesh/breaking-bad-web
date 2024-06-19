@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using breaking_bad_web.DataSetTableAdapters;
 
 namespace breaking_bad_web
 {
@@ -36,6 +37,17 @@ namespace breaking_bad_web
                 errorMessage.Text = "almost nothing is filled";
             else if (num < 2 && num > 0)
                 errorMessage.Text = $"you need to fill {num} more";
+
+            UsersTableAdapter UsersTbl = new UsersTableAdapter();
+            if (UsersTbl.CheckUsers(userName.Text) > 0)
+            {
+                errorMessage.Text = "הפרטים אינם קיימים במערכת";
+
+            }
+            else
+                UsersTbl.Insert1(firstName.Text, lastName.Text, userName.Text, password.Text);
+
+
 
 
         }
