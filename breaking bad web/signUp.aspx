@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>sign up</title>
-    <style>
+    <style type>
     body {
         position: relative;
         margin: 0;
